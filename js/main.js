@@ -15,6 +15,18 @@ function getFetch(){
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
+        let container = document.querySelector('.color_container');
+        
+        //css color variables
+        const colorVar = ['--main_color','--main_accent','--brand_color','--secondary_accent','--secondary_color'];
+
+        //get divs only 
+        let divNodes = [];
+        for(let i=0; i<container.childNodes.length; i++){
+          if(container.childNodes[i].nodeName === 'DIV'){
+            divNodes.push(container.childNodes[i])
+          }
+        }
         })
       })
       .catch(err => {
