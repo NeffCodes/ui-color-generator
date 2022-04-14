@@ -2,25 +2,66 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
+    	<meta name="description" content="A simple site that utilizes colormind.io api to create a ui color palette">
+    	<meta name="keywords" content="color, generator, ui">
 
-		<title>Title in the tab</title>
+		<title>Generate UI Color Scheme</title>
 
 		<!-- external CSS link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lustria&display=swap" rel="stylesheet"> 
+
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 
-		<h1>Which Pokemon?</h1>
-		<input type="text" name="" value="">
-		<button type="button" name="button">Get Pokemon</button>
 
-		<h2>Name?</h2>
-		<img src="" alt="">
-		<h3>Type?</h3>
+		
+		<header>
+			<div class="site_width_container">
+				<h1>Get Random Color Scheme</h1>
 
+				<button type="button" name="button">Get Scheme</button>
+			</div>
+		</header>
+		<main>
+
+			<section class="top">
+				<div class="site_width_container">
+					<section class="color_container">
+						<div class="color main">
+							<div class="box"></div>
+							<h4>Hex: <span class='hex_value'></span></h4>
+							<h4>RGB: <span class='rgb_value'></span></h4>
+						</div>
+						<div class="color main_accent">
+							<div class="box"></div>
+							<h4>Hex: <span class='hex_value'></span></h4>
+							<h4>RGB: <span class='rgb_value'></span></h4>
+						</div>
+						<div class="color brand">
+							<div class="box"></div>
+							<h4>Hex: <span class='hex_value'></span></h4>
+							<h4>RGB: <span class='rgb_value'></span></h4>
+						</div>
+						<div class="color secondary_accent">
+							<div class="box"></div>
+							<h4>Hex: <span class='hex_value'></span></h4>
+							<h4>RGB: <span class='rgb_value'></span></h4>
+						</div>
+						<div class="color secondary">
+							<div class="box"></div>
+							<h4>Hex: <span class='hex_value'></span></h4>
+							<h4>RGB: <span class='rgb_value'></span></h4>
+						</div>
+					</section>
+				</div>
+			</section>
+
+
+		</main>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
