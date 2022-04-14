@@ -27,6 +27,18 @@ function getFetch(){
             divNodes.push(container.childNodes[i])
           }
         }
+
+        //set each color square 
+        data.result.forEach( (color,i) => {
+          let hex = convertRGBtoHex(...color)
+          let rgb = `${color[0]}, ${color[1]}, ${color[2]}`
+
+          document.querySelector('body').style.setProperty(colorVar[i], hex);
+
+          let targetNode = divNodes[i];
+          // targetNode.querySelector('.box').style.backgroundColor = `rgb(${rgb})`
+          targetNode.querySelector('.hex_value').innerText = hex.toUpperCase();
+          targetNode.querySelector('.rgb_value').innerText = rgb;
         })
       })
       .catch(err => {
@@ -34,3 +46,16 @@ function getFetch(){
       });
 }
 
+
+function convertRGBtoHex(r,g,b){
+  let red = r.toString(16).length < 2 ? 
+    r.toString(16).padStart(2,0) :
+    r.toString(16);
+  let green = g.toString(16).length < 2 ? 
+    g.toString(16).padStart(2,0) :
+    g.toString(16);
+  let blue = b.toString(16).length < 2 ? 
+    b.toString(16).padStart(2,0) :
+    b.toString(16);
+  return hex = `#${red}${green}${blue}`
+}
