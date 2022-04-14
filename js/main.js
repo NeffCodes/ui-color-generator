@@ -1,4 +1,4 @@
-document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('.button').addEventListener('click', getFetch)
 
 getFetch()
 
