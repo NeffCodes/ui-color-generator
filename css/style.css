@@ -1,3 +1,15 @@
+
+/******************************************
+/* VARIABLES
+/*******************************************/
+:root {
+  --main_color:#fff;
+  --main_accent:#fff;
+  --brand_color:#fff;
+  --secondary_accent:#fff;
+  --secondary_color:#fff;
+}
+
 /******************************************
 /* CSS
 /*******************************************/
@@ -16,6 +28,122 @@ img{
 }
 
 
+h1, h2, h3, h4 {
+  font-family: 'Lustria', serif;
+  margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+a {
+  filter: invert(80%);
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.site_width_container{
+  margin: 0 auto;
+  padding: 3rem;
+  max-width: var(90rem);
+}
+
+section {
+  width: 100%;
+}
+.color_container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.color {
+  flex: 1 1 0;
+}
+
+.box {
+  height: 4rem;
+  border: 1px solid var(--secondary_color)
+}
+
+.hex_value, .rgb_value {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.left, .right {
+  display: grid;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.left {
+  grid-template-columns: 1fr 2fr;
+}
+.right {
+  grid-template-columns: 2fr 1fr;
+}
+.block {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+}
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.photos .block {
+  flex: 1 1 10rem;
+  margin: 1rem;
+}
+/******************************************
+/* COLOR SETS
+/*******************************************/
+body {
+  background-color: var(--main_color);
+  color: var(--secondary_color);
+}
+header {
+  background-color: var(--secondary_color);
+  color: var(--main_color);
+}
+.sample_2 {
+  background-color: var(--main_accent);
+  color: var(--secondary_color);
+}
+footer {
+  background-color: var(--secondary_accent);
+  color: var(--main_color);
+}
+
+
+.main .box {
+  background-color: var(--main_color);
+}
+.main_accent .box {
+  background-color: var(--main_accent);
+}
+.brand .box {
+  background-color: var(--brand_color);
+}
+.secondary_accent .box {
+  background-color: var(--secondary_accent);
+}
+.secondary .box {
+  background-color: var(--secondary_color);
+}
+
+
+.left .block{
+  background-color: var(--brand_color);
+}
+.right .block {
+  background-color: var(--main_accent);
+}
+
+.photos .block {
+  background-color: var(--main_color);
+  box-shadow: 2px 2px 2px var(--secondary_accent);
+}
+
+
+
