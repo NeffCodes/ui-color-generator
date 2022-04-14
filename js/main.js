@@ -1,5 +1,7 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
+getFetch()
+
 function getFetch(){
   const url = "http://colormind.io/api/";
   const data = {
